@@ -5,7 +5,6 @@ _Contact: <monai.miccai2019@gmail.com>_
 
 This document identifies key concepts of project MONAI at a high level, the goal is to facilitate further technical discussions of requirements,roadmap, feasibility and trade-offs.
 
-
 ## Vision
    *   Develop a community of academic, industrial and clinical researchers collaborating and working on a common foundation of standardized tools.
    *   Create a state-of-the-art, end-to-end training toolkit for healthcare imaging.
@@ -242,3 +241,4 @@ This document identifies key concepts of project MONAI at a high level, the goal
   </tr>
 </table>
 
+test-string inserted here
