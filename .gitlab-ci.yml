@@ -3,7 +3,9 @@ stages:
 
 .base_template : &BASE
    script:
-   - cat README.md
+   - docker run --gpus '"device=0"' -v .:/data nvcr.io/nvidia/pytorch:19.12-py3
+     /bin/bash -c "nvidia-smi && ls /data"
+
 
 build-ci-test:
     stage: build
