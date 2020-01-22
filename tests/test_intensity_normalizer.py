@@ -9,19 +9,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .multi_format_transformer import MultiFormatTransformer
+import unittest
+
+import numpy as np
+
+from monai.data.transforms.intensity_normalizer import IntensityNormalizer
+from tests.utils import NumpyImageTestCase2D
 
 
-class NoiseAdder(MultiFormatTransformer):
-    """Adds noise to the entire image.
+class IntensityNormTestCase(NumpyImageTestCase2D):
 
-    Args:
-        No argument
-    """
+    def test_image_normalizer_default(self):
+        normalizer = IntensityNormalizer()
+        normalised = normalizer(self.imt)
+        expected = (self.imt - np.mean(self.imt)) / np.std(self.imt)
+        self.assertTrue(np.allclose(normalised, expected))
 
-    def __init__(self, noise):
-        MultiFormatTransformer.__init__(self)
-        self.noise = noise
 
-    def _handle_any(self, img):
-        return img + self.noise
+if __name__ == '__main__':
+    unittest.main()
