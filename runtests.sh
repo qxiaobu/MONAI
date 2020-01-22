@@ -75,7 +75,7 @@ fi
 
 
 # unit tests
-${cmdprefix}${cmd} -m unittest
+${cmdprefix}${cmd} -m unittest -v
 
 
 # network training/inference/eval tests
