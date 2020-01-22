@@ -13,6 +13,7 @@ stages:
    # exit-zero treats all errors as warnings.
    # - flake8 . --count --statistics --config ./.flake8
    - ./runtests.sh --quick
+   - echo "Done with runtests.sh"
 
 build-ci-test:
     stage: build
