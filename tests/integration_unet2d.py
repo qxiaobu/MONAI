@@ -28,6 +28,9 @@ def run_test(batch_size=64, train_steps=100, device=torch.device("cuda:0")):
                 im, seg = utils.generateddata.create_test_image_2d(128, 128, noise_max=1, num_objs=4, num_seg_classes=1)
                 yield im[None], seg[None].astype(np.float32)
 
+        def __len__(self):
+            return train_steps
+
     net = networks.nets.UNet(
         dimensions=2,
         in_channels=1,
