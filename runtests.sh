@@ -6,7 +6,9 @@ set -e
 homedir="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $homedir
 
-#export PYTHONPATH="$homedir:$PYTHONPATH"
+export PYTHONPATH="$homedir:$PYTHONPATH"
+
+echo $PYTHONPATH
 
 # configuration values
 doCoverage=false
