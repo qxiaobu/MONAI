@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'nvcr.io/nvidia/pytorch:19.10-py3'
-      args 'stages: '
-    }
-
-  }
+  agent any
   stages {
     stage('Test') {
       steps {
