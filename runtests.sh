@@ -16,7 +16,7 @@ doDryRun=false
 doZooTests=false
 
 # testing command to run
-cmd="python"
+cmd="python3"
 cmdprefix=""
 
 
