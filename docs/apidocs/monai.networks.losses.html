@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>monai.networks.losses package &mdash; MONAI v0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="monai.networks.nets package" href="monai.networks.nets.html" />
+    <link rel="prev" title="monai.networks.layers package" href="monai.networks.layers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MONAI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">MONAI API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="monai.html">monai package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="monai.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="monai.application.html">monai.application package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monai.data.html">monai.data package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="monai.networks.html">monai.networks package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monai.utils.html">monai.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="monai.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MONAI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">monai</a> &raquo;</li>
+        
+          <li><a href="monai.html">monai package</a> &raquo;</li>
+        
+          <li><a href="monai.networks.html">monai.networks package</a> &raquo;</li>
+        
+      <li>monai.networks.losses package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidocs/monai.networks.losses.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="monai-networks-losses-package">
+<h1>monai.networks.losses package<a class="headerlink" href="#monai-networks-losses-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-monai.networks.losses.dice">
+<span id="monai-networks-losses-dice-module"></span><h2>monai.networks.losses.dice module<a class="headerlink" href="#module-monai.networks.losses.dice" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="monai.networks.losses.dice.DiceLoss">
+<em class="property">class </em><code class="sig-name descname">DiceLoss</code><span class="sig-paren">(</span><em class="sig-param">include_background=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/networks/losses/dice.html#DiceLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.networks.losses.dice.DiceLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.loss._Loss</span></code></p>
+<p>Multiclass dice loss. Input logits ‘pred’ (BNHW[D] where N is number of classes) is compared with ground truth
+<a href="#id1"><span class="problematic" id="id2">`</span></a>ground’ (B1HW[D]). Axis N of <a href="#id3"><span class="problematic" id="id4">`</span></a>pred’ is expected to have logit predictions for each class rather than being image
+channels, while the same axis of <a href="#id5"><span class="problematic" id="id6">`</span></a>ground’ should be 1. If the N channel of <a href="#id7"><span class="problematic" id="id8">`</span></a>pred’ is 1 binary dice loss will be
+calculated. The <a href="#id9"><span class="problematic" id="id10">`</span></a>smooth’ parameter is a value added to the intersection and union components of the inter-over-union
+calculation to smooth results and prevent divide-by-0, this value should be small. The <a href="#id11"><span class="problematic" id="id12">`</span></a>include_background’ class
+attribute can be set to False for an instance of DiceLoss to exclude the first category (channel index 0) which is
+by convention assumed to be background. If the non-background segmentations are small compared to the total image
+size they can get overwhelmed by the signal from the background so excluding it in such cases helps convergence.</p>
+<p>If <cite>include_background</cite> is False channel index 0 (background category) is excluded from the calculation.</p>
+<dl class="method">
+<dt id="monai.networks.losses.dice.DiceLoss.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">pred</em>, <em class="sig-param">ground</em>, <em class="sig-param">smooth=1e-05</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/networks/losses/dice.html#DiceLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.networks.losses.dice.DiceLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-monai.networks.losses">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-monai.networks.losses" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="monai.networks.nets.html" class="btn btn-neutral float-right" title="monai.networks.nets package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="monai.networks.layers.html" class="btn btn-neutral float-left" title="monai.networks.layers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, MONAI Consortium
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

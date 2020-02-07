@@ -1,0 +1,22 @@
+monai.data.readers package
+==========================
+
+Submodules
+----------
+
+monai.data.readers.niftireader module
+-------------------------------------
+
+.. automodule:: monai.data.readers.niftireader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: monai.data.readers
+   :members:
+   :undoc-members:
+   :show-inheritance:

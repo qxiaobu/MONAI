@@ -1,0 +1,22 @@
+monai.application.config package
+================================
+
+Submodules
+----------
+
+monai.application.config.deviceconfig module
+--------------------------------------------
+
+.. automodule:: monai.application.config.deviceconfig
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: monai.application.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

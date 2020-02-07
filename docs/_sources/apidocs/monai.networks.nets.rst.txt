@@ -1,0 +1,22 @@
+monai.networks.nets package
+===========================
+
+Submodules
+----------
+
+monai.networks.nets.unet module
+-------------------------------
+
+.. automodule:: monai.networks.nets.unet
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: monai.networks.nets
+   :members:
+   :undoc-members:
+   :show-inheritance:

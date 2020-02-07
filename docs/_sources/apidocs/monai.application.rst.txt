@@ -1,0 +1,20 @@
+monai.application package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   monai.application.config
+   monai.application.engine
+   monai.application.handlers
+   monai.application.metrics
+
+Module contents
+---------------
+
+.. automodule:: monai.application
+   :members:
+   :undoc-members:
+   :show-inheritance:

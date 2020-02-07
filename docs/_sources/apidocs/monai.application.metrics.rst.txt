@@ -1,0 +1,10 @@
+monai.application.metrics package
+=================================
+
+Module contents
+---------------
+
+.. automodule:: monai.application.metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:

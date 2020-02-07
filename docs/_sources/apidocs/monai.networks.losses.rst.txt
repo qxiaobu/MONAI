@@ -1,0 +1,22 @@
+monai.networks.losses package
+=============================
+
+Submodules
+----------
+
+monai.networks.losses.dice module
+---------------------------------
+
+.. automodule:: monai.networks.losses.dice
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: monai.networks.losses
+   :members:
+   :undoc-members:
+   :show-inheritance:

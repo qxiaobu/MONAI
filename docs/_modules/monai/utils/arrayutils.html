@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>monai.utils.arrayutils &mdash; MONAI v0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> MONAI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../apidocs/modules.html">MONAI API reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">MONAI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>monai.utils.arrayutils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for monai.utils.arrayutils</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright 2020 MONAI Consortium</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span><span class="p">,</span> <span class="n">starmap</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="rand_choice"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.rand_choice">[docs]</a><span class="k">def</span> <span class="nf">rand_choice</span><span class="p">(</span><span class="n">prob</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns True if a randomly chosen number is less than or equal to `prob&#39;, by default this is a 50/50 chance.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">prob</span></div>
+
+
+<div class="viewcode-block" id="img_bounds"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.img_bounds">[docs]</a><span class="k">def</span> <span class="nf">img_bounds</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the minimum and maximum indices of non-zero lines in axis 0 of `img&#39;, followed by that for axis 1.&quot;&quot;&quot;</span>
+    <span class="n">ax0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">ax1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ax0</span><span class="p">)[</span><span class="mi">0</span><span class="p">][[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ax1</span><span class="p">)[</span><span class="mi">0</span><span class="p">][[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]))</span></div>
+
+
+<div class="viewcode-block" id="in_bounds"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.in_bounds">[docs]</a><span class="k">def</span> <span class="nf">in_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">margin</span><span class="p">,</span> <span class="n">maxx</span><span class="p">,</span> <span class="n">maxy</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns True if (x,y) is within the rectangle (margin,margin,maxx-margin,maxy-margin).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">margin</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">maxx</span> <span class="o">-</span> <span class="n">margin</span><span class="p">)</span> <span class="ow">and</span> <span class="n">margin</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">maxy</span> <span class="o">-</span> <span class="n">margin</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="is_empty"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.is_empty">[docs]</a><span class="k">def</span> <span class="nf">is_empty</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns True if `img&#39; is empty, that is its maximum value is not greater than its minimum.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">img</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>  <span class="c1"># use &gt; instead of &lt;= so that an image full of NaNs will result in True</span></div>
+
+
+<div class="viewcode-block" id="ensure_tuple_size"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.ensure_tuple_size">[docs]</a><span class="k">def</span> <span class="nf">ensure_tuple_size</span><span class="p">(</span><span class="n">tup</span><span class="p">,</span> <span class="n">dim</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns a copy of `tup&#39; with `dim&#39; values by either shortened or padded with zeros as necessary.&quot;&quot;&quot;</span>
+    <span class="n">tup</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span> <span class="o">*</span> <span class="n">dim</span>
+    <span class="k">return</span> <span class="n">tup</span><span class="p">[:</span><span class="n">dim</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="zero_margins"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.zero_margins">[docs]</a><span class="k">def</span> <span class="nf">zero_margins</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">margin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns True if the values within `margin&#39; indices of the edges of `img&#39; in dimensions 1 and 2 are 0.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="n">margin</span><span class="p">])</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">-</span><span class="n">margin</span><span class="p">:]):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">img</span><span class="p">[:,</span> <span class="p">:</span><span class="n">margin</span><span class="p">,</span> <span class="p">:])</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">img</span><span class="p">[:,</span> <span class="o">-</span><span class="n">margin</span><span class="p">:,</span> <span class="p">:]):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="rescale_array"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.rescale_array">[docs]</a><span class="k">def</span> <span class="nf">rescale_array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">minv</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">maxv</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Rescale the values of numpy array `arr&#39; to be from `minv&#39; to `maxv&#39;.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">mina</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+    <span class="n">maxa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">mina</span> <span class="o">==</span> <span class="n">maxa</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span> <span class="o">*</span> <span class="n">minv</span>
+
+    <span class="n">norm</span> <span class="o">=</span> <span class="p">(</span><span class="n">arr</span> <span class="o">-</span> <span class="n">mina</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">maxa</span> <span class="o">-</span> <span class="n">mina</span><span class="p">)</span>  <span class="c1"># normalize the array first</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">norm</span> <span class="o">*</span> <span class="p">(</span><span class="n">maxv</span> <span class="o">-</span> <span class="n">minv</span><span class="p">))</span> <span class="o">+</span> <span class="n">minv</span>  <span class="c1"># rescale by minv and maxv, which is the normalized array by default</span></div>
+
+
+<div class="viewcode-block" id="rescale_instance_array"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.rescale_instance_array">[docs]</a><span class="k">def</span> <span class="nf">rescale_instance_array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">minv</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">maxv</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Rescale each array slice along the first dimension of `arr&#39; independently.&quot;&quot;&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">rescale_array</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">minv</span><span class="p">,</span> <span class="n">maxv</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">out</span></div>
+
+
+<div class="viewcode-block" id="rescale_array_int_max"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.rescale_array_int_max">[docs]</a><span class="k">def</span> <span class="nf">rescale_array_int_max</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Rescale the array `arr&#39; to be between the minimum and maximum values of the type `dtype&#39;.&quot;&quot;&quot;</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rescale_array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">info</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">info</span><span class="o">.</span><span class="n">max</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="copypaste_arrays"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.copypaste_arrays">[docs]</a><span class="k">def</span> <span class="nf">copypaste_arrays</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">srccenter</span><span class="p">,</span> <span class="n">destcenter</span><span class="p">,</span> <span class="n">dims</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate the slices to copy a sliced area of array `src&#39; into array `dest&#39;. The area has dimensions `dims&#39; (use 0</span>
+<span class="sd">    or None to copy everything in that dimension), the source area is centered at `srccenter&#39; index in `src&#39; and copied</span>
+<span class="sd">    into area centered at `destcenter&#39; in `dest&#39;. The dimensions of the copied area will be clipped to fit within the</span>
+<span class="sd">    source and destination arrays so a smaller area may be copied than expected. Return value is the tuples of slice</span>
+<span class="sd">    objects indexing the copied area in `src&#39;, and those indexing the copy area in `dest&#39;.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        src=np.random.randint(0,10,(6,6))</span>
+<span class="sd">        dest=np.zeros_like(src)</span>
+<span class="sd">        srcslices,destslices=copypasteArrays(src,dest,(3,2),(2,1),(3,4))</span>
+<span class="sd">        dest[destslices]=src[srcslices]</span>
+<span class="sd">        print(src)</span>
+<span class="sd">        print(dest)</span>
+
+<span class="sd">        &gt;&gt;&gt; [[9 5 6 6 9 6]</span>
+<span class="sd">             [4 3 5 6 1 2]</span>
+<span class="sd">             [0 7 3 2 4 1]</span>
+<span class="sd">             [3 0 0 1 5 1]</span>
+<span class="sd">             [9 4 7 1 8 2]</span>
+<span class="sd">             [6 6 5 8 6 7]]</span>
+<span class="sd">            [[0 0 0 0 0 0]</span>
+<span class="sd">             [7 3 2 4 0 0]</span>
+<span class="sd">             [0 0 1 5 0 0]</span>
+<span class="sd">             [4 7 1 8 0 0]</span>
+<span class="sd">             [0 0 0 0 0 0]</span>
+<span class="sd">             [0 0 0 0 0 0]]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">srcslices</span> <span class="o">=</span> <span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">)]</span> <span class="o">*</span> <span class="n">src</span><span class="o">.</span><span class="n">ndim</span>
+    <span class="n">destslices</span> <span class="o">=</span> <span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">)]</span> <span class="o">*</span> <span class="n">dest</span><span class="o">.</span><span class="n">ndim</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">sc</span><span class="p">,</span> <span class="n">dc</span><span class="p">,</span> <span class="n">dim</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">ndim</span><span class="p">),</span> <span class="n">src</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dest</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">srccenter</span><span class="p">,</span> <span class="n">destcenter</span><span class="p">,</span> <span class="n">dims</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">dim</span><span class="p">:</span>
+            <span class="c1"># dimension before midpoint, clip to size fitting in both arrays</span>
+            <span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">dim</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">sc</span><span class="p">,</span> <span class="n">dc</span><span class="p">))</span>
+            <span class="c1"># dimension after midpoint, clip to size fitting in both arrays</span>
+            <span class="n">d2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">dim</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">ss</span> <span class="o">-</span> <span class="n">sc</span><span class="p">,</span> <span class="n">ds</span> <span class="o">-</span> <span class="n">dc</span><span class="p">))</span>
+
+            <span class="n">srcslices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">sc</span> <span class="o">-</span> <span class="n">d1</span><span class="p">,</span> <span class="n">sc</span> <span class="o">+</span> <span class="n">d2</span><span class="p">)</span>
+            <span class="n">destslices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">dc</span> <span class="o">-</span> <span class="n">d1</span><span class="p">,</span> <span class="n">dc</span> <span class="o">+</span> <span class="n">d2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">srcslices</span><span class="p">),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">destslices</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="resize_center"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.resize_center">[docs]</a><span class="k">def</span> <span class="nf">resize_center</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="o">*</span><span class="n">resize_dims</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Resize `img&#39; by cropping or expanding the image from the center. The `resizeDims&#39; values are the output dimensions</span>
+<span class="sd">    (or None to use original dimension of `img&#39;). If a dimension is smaller than that of `img&#39; then the result will be</span>
+<span class="sd">    cropped and if larger padded with zeros, in both cases this is done relative to the center of `img&#39;. The result is</span>
+<span class="sd">    a new image with the specified dimensions and values from `img&#39; copied into its center.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">resize_dims</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">resize_dims</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">or</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">resize_dims</span><span class="p">)))</span>
+
+    <span class="n">dest</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">resize_dims</span><span class="p">,</span> <span class="n">fill_value</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">half_img_shape</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">half_dest_shape</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">dest</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+    <span class="n">srcslices</span><span class="p">,</span> <span class="n">destslices</span> <span class="o">=</span> <span class="n">copypaste_arrays</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">half_img_shape</span><span class="p">,</span> <span class="n">half_dest_shape</span><span class="p">,</span> <span class="n">resize_dims</span><span class="p">)</span>
+    <span class="n">dest</span><span class="p">[</span><span class="n">destslices</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span><span class="p">[</span><span class="n">srcslices</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">dest</span></div>
+
+
+<div class="viewcode-block" id="get_valid_patch_size"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.get_valid_patch_size">[docs]</a><span class="k">def</span> <span class="nf">get_valid_patch_size</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given an image of dimensions `dims`, return a patch size tuple taking the dimension from `patch_size` if this is</span>
+<span class="sd">    not 0/None. Otherwise, or if `patch_size` is shorter than `dims`, the dimension from `dims` is taken. This ensures</span>
+<span class="sd">    the returned patch size is within the bounds of `dims`. If `patch_size` is a single number this is interpreted as a</span>
+<span class="sd">    patch of the same dimensionality of `dims` with that size in each dimension.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ndim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># if a single value was given as patch size, treat this as the size of the patch over all dimensions</span>
+        <span class="n">single_patch_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">patch_size</span><span class="p">)</span>
+        <span class="n">patch_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">single_patch_size</span><span class="p">,)</span> <span class="o">*</span> <span class="n">ndim</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>  <span class="c1"># raised if the patch size is multiple values</span>
+        <span class="c1"># ensure patch size is at least as long as number of dimensions</span>
+        <span class="n">patch_size</span> <span class="o">=</span> <span class="n">ensure_tuple_size</span><span class="p">(</span><span class="n">patch_size</span><span class="p">,</span> <span class="n">ndim</span><span class="p">)</span>
+
+    <span class="c1"># ensure patch size dimensions are not larger than image dimension, if a dimension is None or 0 use whole dimension</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">ms</span><span class="p">,</span> <span class="n">ps</span> <span class="ow">or</span> <span class="n">ms</span><span class="p">)</span> <span class="k">for</span> <span class="n">ms</span><span class="p">,</span> <span class="n">ps</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="get_random_patch"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.get_random_patch">[docs]</a><span class="k">def</span> <span class="nf">get_random_patch</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a tuple of slices to define a random patch in an array of shape `dims` with size `patch_size` or the as</span>
+<span class="sd">    close to it as possible within the given dimension. It is expected that `patch_size` is a valid patch for a source</span>
+<span class="sd">    of shape `dims` as returned by `get_valid_patch_size`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dims (tuple of int): shape of source array</span>
+<span class="sd">        patch_size (tuple of int): shape of patch size to generate</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (tuple of slice): a tuple of slice objects defining the patch</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># choose the minimal corner of the patch</span>
+    <span class="n">min_corner</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ms</span> <span class="o">-</span> <span class="n">ps</span><span class="p">)</span> <span class="k">if</span> <span class="n">ms</span> <span class="o">&gt;</span> <span class="n">ps</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">ms</span><span class="p">,</span> <span class="n">ps</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">))</span>
+
+    <span class="c1"># create the slices for each dimension which define the patch in the source array</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">mc</span> <span class="o">+</span> <span class="n">ps</span><span class="p">)</span> <span class="k">for</span> <span class="n">mc</span><span class="p">,</span> <span class="n">ps</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">min_corner</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="iter_patch_slices"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.iter_patch_slices">[docs]</a><span class="k">def</span> <span class="nf">iter_patch_slices</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">,</span> <span class="n">start_pos</span><span class="o">=</span><span class="p">()):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Yield successive tuples of slices defining patches of size `patch_size` from an array of dimensions `dims`. The </span>
+<span class="sd">    iteration starts from position `start_pos` in the array, or starting at the origin if this isn&#39;t provided. Each </span>
+<span class="sd">    patch is chosen in a contiguous grid using a first dimension as least significant ordering.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dims (tuple of int): dimensions of array to iterate over</span>
+<span class="sd">        patch_size (tuple of int or None): size of patches to generate slices for, 0 or None selects whole dimension</span>
+<span class="sd">        start_pos (tuple of it, optional): starting position in the array, default is 0 for each dimension</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        Tuples of slice objects defining each patch</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># ensure patchSize and startPos are the right length</span>
+    <span class="n">ndim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span>
+    <span class="n">patch_size</span> <span class="o">=</span> <span class="n">get_valid_patch_size</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">)</span>
+    <span class="n">start_pos</span> <span class="o">=</span> <span class="n">ensure_tuple_size</span><span class="p">(</span><span class="n">start_pos</span><span class="p">,</span> <span class="n">ndim</span><span class="p">)</span>
+
+    <span class="c1"># collect the ranges to step over each dimension</span>
+    <span class="n">ranges</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">starmap</span><span class="p">(</span><span class="nb">range</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">start_pos</span><span class="p">,</span> <span class="n">dims</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">)))</span>
+
+    <span class="c1"># choose patches by applying product to the ranges</span>
+    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">ranges</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>  <span class="c1"># reverse ranges order to iterate in index order</span>
+        <span class="k">yield</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span> <span class="o">+</span> <span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">position</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">patch_size</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="iter_patch"><a class="viewcode-back" href="../../../apidocs/monai.utils.html#monai.utils.arrayutils.iter_patch">[docs]</a><span class="k">def</span> <span class="nf">iter_patch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">,</span> <span class="n">start_pos</span><span class="o">=</span><span class="p">(),</span> <span class="n">copy_back</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pad_mode</span><span class="o">=</span><span class="s2">&quot;wrap&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">pad_opts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Yield successive patches from `arr&#39; of size `patchSize&#39;. The iteration can start from position `startPos&#39; in `arr&#39; </span>
+<span class="sd">    but drawing from a padded array extended by the `patchSize&#39; in each dimension (so these coordinates can be negative </span>
+<span class="sd">    to start in the padded region). If `copyBack&#39; is True the values from each patch are written back to `arr&#39;.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        arr (np.ndarray): array to iterate over</span>
+<span class="sd">        patch_size (tuple of int or None): size of patches to generate slices for, 0 or None selects whole dimension</span>
+<span class="sd">        start_pos (tuple of it, optional): starting position in the array, default is 0 for each dimension</span>
+<span class="sd">        copy_back (bool): if True data from the yielded patches is copied back to `arr` once the generator completes</span>
+<span class="sd">        pad_mode (str, optional): padding mode, see numpy.pad</span>
+<span class="sd">        pad_opts (dict, optional): padding options, see numpy.pad</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        Patches of array data from `arr` which are views into a padded array which can be modified, if `copy_back` is</span>
+<span class="sd">        True these changes will be reflected in `arr` once the iteration completes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># ensure patchSize and startPos are the right length</span>
+    <span class="n">patch_size</span> <span class="o">=</span> <span class="n">get_valid_patch_size</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">)</span>
+    <span class="n">start_pos</span> <span class="o">=</span> <span class="n">ensure_tuple_size</span><span class="p">(</span><span class="n">start_pos</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+
+    <span class="c1"># pad image by maximum values needed to ensure patches are taken from inside an image</span>
+    <span class="n">arrpad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">patch_size</span><span class="p">),</span> <span class="n">pad_mode</span><span class="p">,</span> <span class="o">**</span><span class="n">pad_opts</span><span class="p">)</span>
+
+    <span class="c1"># choose a start position in the padded image</span>
+    <span class="n">start_pos_padded</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="n">p</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">start_pos</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">))</span>
+
+    <span class="c1"># choose a size to iterate over which is smaller than the actual padded image to prevent producing</span>
+    <span class="c1"># patches which are only in the padded regions</span>
+    <span class="n">iter_size</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="n">p</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">slices</span> <span class="ow">in</span> <span class="n">iter_patch_slices</span><span class="p">(</span><span class="n">iter_size</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">,</span> <span class="n">start_pos_padded</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">arrpad</span><span class="p">[</span><span class="n">slices</span><span class="p">]</span>
+
+    <span class="c1"># copy back data from the padded image if required</span>
+    <span class="k">if</span> <span class="n">copy_back</span><span class="p">:</span>
+        <span class="n">slices</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">patch_size</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+        <span class="n">arr</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">arrpad</span><span class="p">[</span><span class="n">slices</span><span class="p">]</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, MONAI Consortium
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

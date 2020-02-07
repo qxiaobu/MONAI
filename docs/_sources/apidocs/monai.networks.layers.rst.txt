@@ -1,0 +1,30 @@
+monai.networks.layers package
+=============================
+
+Submodules
+----------
+
+monai.networks.layers.convolutions module
+-----------------------------------------
+
+.. automodule:: monai.networks.layers.convolutions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+monai.networks.layers.simplelayers module
+-----------------------------------------
+
+.. automodule:: monai.networks.layers.simplelayers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: monai.networks.layers
+   :members:
+   :undoc-members:
+   :show-inheritance:

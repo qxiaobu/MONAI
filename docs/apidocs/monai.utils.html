@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>monai.utils package &mdash; MONAI v0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="monai.networks.nets package" href="monai.networks.nets.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MONAI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">MONAI API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="monai.html">monai package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="monai.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="monai.application.html">monai.application package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monai.data.html">monai.data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="monai.networks.html">monai.networks package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">monai.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="monai.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MONAI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">monai</a> &raquo;</li>
+        
+          <li><a href="monai.html">monai package</a> &raquo;</li>
+        
+      <li>monai.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidocs/monai.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="monai-utils-package">
+<h1>monai.utils package<a class="headerlink" href="#monai-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-monai.utils.aliases">
+<span id="monai-utils-aliases-module"></span><h2>monai.utils.aliases module<a class="headerlink" href="#module-monai.utils.aliases" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="monai.utils.aliases.alias">
+<code class="sig-name descname">alias</code><span class="sig-paren">(</span><em class="sig-param">*names</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/aliases.html#alias"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.aliases.alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the decorated function or class in the global aliases table under the given names.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.aliases.resolve_name">
+<code class="sig-name descname">resolve_name</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/aliases.html#resolve_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.aliases.resolve_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for the declaration (function or class) with the given name. This will first search the list of aliases to
+see if it was declared with this aliased name, then search treating <cite>name</cite> as a fully qualified name, then search
+the loaded modules for one having a declaration with the given name. If no declaration is found, raise ValueError.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-monai.utils.arrayutils">
+<span id="monai-utils-arrayutils-module"></span><h2>monai.utils.arrayutils module<a class="headerlink" href="#module-monai.utils.arrayutils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="monai.utils.arrayutils.copypaste_arrays">
+<code class="sig-name descname">copypaste_arrays</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">dest</em>, <em class="sig-param">srccenter</em>, <em class="sig-param">destcenter</em>, <em class="sig-param">dims</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#copypaste_arrays"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.copypaste_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the slices to copy a sliced area of array <a href="#id1"><span class="problematic" id="id2">`</span></a>src’ into array <a href="#id3"><span class="problematic" id="id4">`</span></a>dest’. The area has dimensions <a href="#id5"><span class="problematic" id="id6">`</span></a>dims’ (use 0
+or None to copy everything in that dimension), the source area is centered at <a href="#id7"><span class="problematic" id="id8">`</span></a>srccenter’ index in <a href="#id9"><span class="problematic" id="id10">`</span></a>src’ and copied
+into area centered at <a href="#id11"><span class="problematic" id="id12">`</span></a>destcenter’ in <a href="#id13"><span class="problematic" id="id14">`</span></a>dest’. The dimensions of the copied area will be clipped to fit within the
+source and destination arrays so a smaller area may be copied than expected. Return value is the tuples of slice
+objects indexing the copied area in <a href="#id15"><span class="problematic" id="id16">`</span></a>src’, and those indexing the copy area in <a href="#id17"><span class="problematic" id="id18">`</span></a>dest’.</p>
+<p class="rubric">Example</p>
+<p>src=np.random.randint(0,10,(6,6))
+dest=np.zeros_like(src)
+srcslices,destslices=copypasteArrays(src,dest,(3,2),(2,1),(3,4))
+dest[destslices]=src[srcslices]
+print(src)
+print(dest)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[[</span><span class="mi">9</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">6</span> <span class="mi">9</span> <span class="mi">6</span><span class="p">]</span>
+<span class="go">     [4 3 5 6 1 2]</span>
+<span class="go">     [0 7 3 2 4 1]</span>
+<span class="go">     [3 0 0 1 5 1]</span>
+<span class="go">     [9 4 7 1 8 2]</span>
+<span class="go">     [6 6 5 8 6 7]]</span>
+<span class="go">    [[0 0 0 0 0 0]</span>
+<span class="go">     [7 3 2 4 0 0]</span>
+<span class="go">     [0 0 1 5 0 0]</span>
+<span class="go">     [4 7 1 8 0 0]</span>
+<span class="go">     [0 0 0 0 0 0]</span>
+<span class="go">     [0 0 0 0 0 0]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.ensure_tuple_size">
+<code class="sig-name descname">ensure_tuple_size</code><span class="sig-paren">(</span><em class="sig-param">tup</em>, <em class="sig-param">dim</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#ensure_tuple_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.ensure_tuple_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of <a href="#id19"><span class="problematic" id="id20">`</span></a>tup’ with <a href="#id21"><span class="problematic" id="id22">`</span></a>dim’ values by either shortened or padded with zeros as necessary.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.get_random_patch">
+<code class="sig-name descname">get_random_patch</code><span class="sig-paren">(</span><em class="sig-param">dims</em>, <em class="sig-param">patch_size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#get_random_patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.get_random_patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a tuple of slices to define a random patch in an array of shape <cite>dims</cite> with size <cite>patch_size</cite> or the as
+close to it as possible within the given dimension. It is expected that <cite>patch_size</cite> is a valid patch for a source
+of shape <cite>dims</cite> as returned by <cite>get_valid_patch_size</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dims</strong> (<em>tuple of int</em>) – shape of source array</p></li>
+<li><p><strong>patch_size</strong> (<em>tuple of int</em>) – shape of patch size to generate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple of slice objects defining the patch</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(tuple of slice)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.get_valid_patch_size">
+<code class="sig-name descname">get_valid_patch_size</code><span class="sig-paren">(</span><em class="sig-param">dims</em>, <em class="sig-param">patch_size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#get_valid_patch_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.get_valid_patch_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an image of dimensions <cite>dims</cite>, return a patch size tuple taking the dimension from <cite>patch_size</cite> if this is
+not 0/None. Otherwise, or if <cite>patch_size</cite> is shorter than <cite>dims</cite>, the dimension from <cite>dims</cite> is taken. This ensures
+the returned patch size is within the bounds of <cite>dims</cite>. If <cite>patch_size</cite> is a single number this is interpreted as a
+patch of the same dimensionality of <cite>dims</cite> with that size in each dimension.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.img_bounds">
+<code class="sig-name descname">img_bounds</code><span class="sig-paren">(</span><em class="sig-param">img</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#img_bounds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.img_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the minimum and maximum indices of non-zero lines in axis 0 of <a href="#id23"><span class="problematic" id="id24">`</span></a>img’, followed by that for axis 1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.in_bounds">
+<code class="sig-name descname">in_bounds</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">margin</em>, <em class="sig-param">maxx</em>, <em class="sig-param">maxy</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#in_bounds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.in_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if (x,y) is within the rectangle (margin,margin,maxx-margin,maxy-margin).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.is_empty">
+<code class="sig-name descname">is_empty</code><span class="sig-paren">(</span><em class="sig-param">img</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#is_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if <a href="#id25"><span class="problematic" id="id26">`</span></a>img’ is empty, that is its maximum value is not greater than its minimum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.iter_patch">
+<code class="sig-name descname">iter_patch</code><span class="sig-paren">(</span><em class="sig-param">arr</em>, <em class="sig-param">patch_size</em>, <em class="sig-param">start_pos=()</em>, <em class="sig-param">copy_back=True</em>, <em class="sig-param">pad_mode='wrap'</em>, <em class="sig-param">**pad_opts</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#iter_patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.iter_patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield successive patches from <a href="#id27"><span class="problematic" id="id28">`</span></a>arr’ of size <a href="#id29"><span class="problematic" id="id30">`</span></a>patchSize’. The iteration can start from position <a href="#id31"><span class="problematic" id="id32">`</span></a>startPos’ in <a href="#id33"><span class="problematic" id="id34">`</span></a>arr’
+but drawing from a padded array extended by the <a href="#id35"><span class="problematic" id="id36">`</span></a>patchSize’ in each dimension (so these coordinates can be negative
+to start in the padded region). If <a href="#id37"><span class="problematic" id="id38">`</span></a>copyBack’ is True the values from each patch are written back to <a href="#id39"><span class="problematic" id="id40">`</span></a>arr’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>np.ndarray</em>) – array to iterate over</p></li>
+<li><p><strong>patch_size</strong> (<em>tuple of int</em><em> or </em><em>None</em>) – size of patches to generate slices for, 0 or None selects whole dimension</p></li>
+<li><p><strong>start_pos</strong> (<em>tuple of it</em><em>, </em><em>optional</em>) – starting position in the array, default is 0 for each dimension</p></li>
+<li><p><strong>copy_back</strong> (<em>bool</em>) – if True data from the yielded patches is copied back to <cite>arr</cite> once the generator completes</p></li>
+<li><p><strong>pad_mode</strong> (<em>str</em><em>, </em><em>optional</em>) – padding mode, see numpy.pad</p></li>
+<li><p><strong>pad_opts</strong> (<em>dict</em><em>, </em><em>optional</em>) – padding options, see numpy.pad</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>Patches of array data from <cite>arr</cite> which are views into a padded array which can be modified, if <cite>copy_back</cite> is
+True these changes will be reflected in <cite>arr</cite> once the iteration completes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.iter_patch_slices">
+<code class="sig-name descname">iter_patch_slices</code><span class="sig-paren">(</span><em class="sig-param">dims</em>, <em class="sig-param">patch_size</em>, <em class="sig-param">start_pos=()</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#iter_patch_slices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.iter_patch_slices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield successive tuples of slices defining patches of size <cite>patch_size</cite> from an array of dimensions <cite>dims</cite>. The
+iteration starts from position <cite>start_pos</cite> in the array, or starting at the origin if this isn’t provided. Each
+patch is chosen in a contiguous grid using a first dimension as least significant ordering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dims</strong> (<em>tuple of int</em>) – dimensions of array to iterate over</p></li>
+<li><p><strong>patch_size</strong> (<em>tuple of int</em><em> or </em><em>None</em>) – size of patches to generate slices for, 0 or None selects whole dimension</p></li>
+<li><p><strong>start_pos</strong> (<em>tuple of it</em><em>, </em><em>optional</em>) – starting position in the array, default is 0 for each dimension</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>Tuples of slice objects defining each patch</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.rand_choice">
+<code class="sig-name descname">rand_choice</code><span class="sig-paren">(</span><em class="sig-param">prob=0.5</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#rand_choice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.rand_choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if a randomly chosen number is less than or equal to <a href="#id41"><span class="problematic" id="id42">`</span></a>prob’, by default this is a 50/50 chance.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.rescale_array">
+<code class="sig-name descname">rescale_array</code><span class="sig-paren">(</span><em class="sig-param">arr</em>, <em class="sig-param">minv=0.0</em>, <em class="sig-param">maxv=1.0</em>, <em class="sig-param">dtype=&lt;class 'numpy.float32'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#rescale_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.rescale_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rescale the values of numpy array <a href="#id43"><span class="problematic" id="id44">`</span></a>arr’ to be from <a href="#id45"><span class="problematic" id="id46">`</span></a>minv’ to <a href="#id47"><span class="problematic" id="id48">`</span></a>maxv’.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.rescale_array_int_max">
+<code class="sig-name descname">rescale_array_int_max</code><span class="sig-paren">(</span><em class="sig-param">arr</em>, <em class="sig-param">dtype=&lt;class 'numpy.uint16'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#rescale_array_int_max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.rescale_array_int_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rescale the array <a href="#id49"><span class="problematic" id="id50">`</span></a>arr’ to be between the minimum and maximum values of the type <a href="#id51"><span class="problematic" id="id52">`</span></a>dtype’.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.rescale_instance_array">
+<code class="sig-name descname">rescale_instance_array</code><span class="sig-paren">(</span><em class="sig-param">arr</em>, <em class="sig-param">minv=0.0</em>, <em class="sig-param">maxv=1.0</em>, <em class="sig-param">dtype=&lt;class 'numpy.float32'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#rescale_instance_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.rescale_instance_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rescale each array slice along the first dimension of <a href="#id53"><span class="problematic" id="id54">`</span></a>arr’ independently.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.resize_center">
+<code class="sig-name descname">resize_center</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">*resize_dims</em>, <em class="sig-param">fill_value=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#resize_center"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.resize_center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resize <a href="#id55"><span class="problematic" id="id56">`</span></a>img’ by cropping or expanding the image from the center. The <a href="#id57"><span class="problematic" id="id58">`</span></a>resizeDims’ values are the output dimensions
+(or None to use original dimension of <a href="#id59"><span class="problematic" id="id60">`</span></a>img’). If a dimension is smaller than that of <a href="#id61"><span class="problematic" id="id62">`</span></a>img’ then the result will be
+cropped and if larger padded with zeros, in both cases this is done relative to the center of <a href="#id63"><span class="problematic" id="id64">`</span></a>img’. The result is
+a new image with the specified dimensions and values from <a href="#id65"><span class="problematic" id="id66">`</span></a>img’ copied into its center.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.arrayutils.zero_margins">
+<code class="sig-name descname">zero_margins</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">margin</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/arrayutils.html#zero_margins"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.arrayutils.zero_margins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the values within <a href="#id67"><span class="problematic" id="id68">`</span></a>margin’ indices of the edges of <a href="#id69"><span class="problematic" id="id70">`</span></a>img’ in dimensions 1 and 2 are 0.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-monai.utils.convutils">
+<span id="monai-utils-convutils-module"></span><h2>monai.utils.convutils module<a class="headerlink" href="#module-monai.utils.convutils" title="Permalink to this headline">¶</a></h2>
+<p>A collection of utility definitions for convolutional operations and concepts. These depend at most on numpy.</p>
+<dl class="function">
+<dt id="monai.utils.convutils.calculate_out_shape">
+<code class="sig-name descname">calculate_out_shape</code><span class="sig-paren">(</span><em class="sig-param">in_shape</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride</em>, <em class="sig-param">padding</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/convutils.html#calculate_out_shape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.convutils.calculate_out_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the output tensor shape when applying a convolution to a tensor of shape <a href="#id71"><span class="problematic" id="id72">`</span></a>inShape’ with kernel size
+‘kernel_size’, stride value <a href="#id73"><span class="problematic" id="id74">`</span></a>stride’, and input padding value <a href="#id75"><span class="problematic" id="id76">`</span></a>padding’. All arguments can be scalars or multiple
+values, return value is a scalar if all inputs are scalars.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.convutils.one_hot">
+<code class="sig-name descname">one_hot</code><span class="sig-paren">(</span><em class="sig-param">labels</em>, <em class="sig-param">num_classes</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/convutils.html#one_hot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.convutils.one_hot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts label image <a href="#id77"><span class="problematic" id="id78">`</span></a>labels’ to a one-hot vector with <a href="#id79"><span class="problematic" id="id80">`</span></a>num_classes’ number of channels as last dimension.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.convutils.same_padding">
+<code class="sig-name descname">same_padding</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">dilation=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/convutils.html#same_padding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.convutils.same_padding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the padding value needed to ensure a convolution using the given kernel size produces an output of the same
+shape as the input for a stride of 1, otherwise ensure a shape of the input divided by the stride rounded down.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="monai-utils-decorators-module">
+<h2>monai.utils.decorators module<a class="headerlink" href="#monai-utils-decorators-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-monai.utils.generateddata">
+<span id="monai-utils-generateddata-module"></span><h2>monai.utils.generateddata module<a class="headerlink" href="#module-monai.utils.generateddata" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="monai.utils.generateddata.create_test_image_2d">
+<code class="sig-name descname">create_test_image_2d</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">height</em>, <em class="sig-param">num_objs=12</em>, <em class="sig-param">rad_max=30</em>, <em class="sig-param">noise_max=0.0</em>, <em class="sig-param">num_seg_classes=5</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/generateddata.html#create_test_image_2d"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.generateddata.create_test_image_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a noisy 2D image with <a href="#id81"><span class="problematic" id="id82">`</span></a>numObj’ circles and a 2D mask image. The maximum radius of the circles is given as
+<a href="#id83"><span class="problematic" id="id84">`</span></a>radMax’. The mask will have <a href="#id85"><span class="problematic" id="id86">`</span></a>numSegClasses’ number of classes for segmentations labeled sequentially from 1, plus a
+background class represented as 0. If <a href="#id87"><span class="problematic" id="id88">`</span></a>noiseMax’ is greater than 0 then noise will be added to the image taken from
+the uniform distribution on range [0,noiseMax).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-monai.utils.mathutils">
+<span id="monai-utils-mathutils-module"></span><h2>monai.utils.mathutils module<a class="headerlink" href="#module-monai.utils.mathutils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="monai.utils.mathutils.ensure_tuple">
+<code class="sig-name descname">ensure_tuple</code><span class="sig-paren">(</span><em class="sig-param">vals</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/mathutils.html#ensure_tuple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.mathutils.ensure_tuple" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.mathutils.first">
+<code class="sig-name descname">first</code><span class="sig-paren">(</span><em class="sig-param">iterable</em>, <em class="sig-param">default=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/mathutils.html#first"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.mathutils.first" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first item in the given iterable or <cite>default</cite> if empty, meaningful mostly with ‘for’ expressions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.mathutils.star_zip_with">
+<code class="sig-name descname">star_zip_with</code><span class="sig-paren">(</span><em class="sig-param">op</em>, <em class="sig-param">*vals</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/mathutils.html#star_zip_with"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.mathutils.star_zip_with" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use starmap as the mapping function in zipWith.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.mathutils.zip_with">
+<code class="sig-name descname">zip_with</code><span class="sig-paren">(</span><em class="sig-param">op</em>, <em class="sig-param">*vals</em>, <em class="sig-param">mapfunc=&lt;class 'map'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/mathutils.html#zip_with"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.mathutils.zip_with" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map <cite>op</cite>, using <cite>mapfunc</cite>, to each tuple derived from zipping the iterables in <a href="#id89"><span class="problematic" id="id90">`</span></a>vals’.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-monai.utils.moduleutils">
+<span id="monai-utils-moduleutils-module"></span><h2>monai.utils.moduleutils module<a class="headerlink" href="#module-monai.utils.moduleutils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="monai.utils.moduleutils.export">
+<code class="sig-name descname">export</code><span class="sig-paren">(</span><em class="sig-param">modname</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/moduleutils.html#export"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.moduleutils.export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the decorated object a member of the named module.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.moduleutils.get_full_type_name">
+<code class="sig-name descname">get_full_type_name</code><span class="sig-paren">(</span><em class="sig-param">typeobj</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/moduleutils.html#get_full_type_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.moduleutils.get_full_type_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="monai.utils.moduleutils.load_submodules">
+<code class="sig-name descname">load_submodules</code><span class="sig-paren">(</span><em class="sig-param">basemod</em>, <em class="sig-param">load_all=True</em>, <em class="sig-param">exclude_pattern='(.*[tT]est.*)|(_.*)'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/monai/utils/moduleutils.html#load_submodules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#monai.utils.moduleutils.load_submodules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Traverse the source of the module structure starting with module <cite>basemod</cite>, loading all packages plus all files if
+<cite>loadAll</cite> is True, excluding anything whose name matches <cite>excludePattern</cite>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-monai.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-monai.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="monai.networks.nets.html" class="btn btn-neutral float-left" title="monai.networks.nets package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, MONAI Consortium
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

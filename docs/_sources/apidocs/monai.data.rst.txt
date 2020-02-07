@@ -1,0 +1,18 @@
+monai.data package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   monai.data.readers
+   monai.data.transforms
+
+Module contents
+---------------
+
+.. automodule:: monai.data
+   :members:
+   :undoc-members:
+   :show-inheritance:

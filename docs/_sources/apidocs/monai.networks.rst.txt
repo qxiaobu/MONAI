@@ -1,0 +1,31 @@
+monai.networks package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   monai.networks.layers
+   monai.networks.losses
+   monai.networks.nets
+
+Submodules
+----------
+
+monai.networks.utils module
+---------------------------
+
+.. automodule:: monai.networks.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: monai.networks
+   :members:
+   :undoc-members:
+   :show-inheritance:
